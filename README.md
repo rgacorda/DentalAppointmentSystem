@@ -1,35 +1,108 @@
-# BPDCASS
-This repository is for the BPDCASS web application development.
+```markdown
+# 🦷 Dental Appointment System
 
-# 08/31/23
-added sql docker:
-    run "docker-compose up"
-    create database named "bpdcass_development"
+A full-stack dental clinic appointment management system built with the **SERN stack** (Sequelize, Express, React, Node.js), styled using **Tailwind CSS**, and structured with the **MVC (Model-View-Controller)** pattern for clean separation of concerns.
 
-added routes
-added misc
+This system allows patients to book appointments, and admins/dentists to manage scheduling, availability, and patient records.
 
-# 08/31/23
-minor changes on index.js
+---
 
-# 09/01/23
-added tables for models but not yet complete:
-    appointment.js doesn't have foreign id yet
+## 🧩 Tech Stack
 
-# 09/02/23
-major changes on models: still not finished (foreign keys)
+- **Frontend**: React.js + Tailwind CSS
+- **Backend**: Express.js (Node.js)
+- **Database**: MySQL (via Sequelize ORM)
+- **Architecture**: MVC pattern
+- **API Communication**: Axios
 
-# 09/02/23
-restructured the folders to adhere to the mvc architecture
-# 09/02/23
-added controllers folder
-# 09/02/23
-restructured and centralized all the routes into one file: requestRoutes.js
-# 09/02/23
-renamed the models using camelCase (e.g nameModel.js)
-# 09/02/23
-created a controller for the userModel
-# 09/02/23
-connected the requestRoutes to the userController
-#01/10/2023
-password needs to be hashed before saving to the db
+---
+
+## 🚀 Features
+
+### 🧑‍⚕️ For Dentists/Admins
+- Manage available time slots
+- View and confirm/reject patient appointments
+- Maintain patient records and appointment history
+- Role-based dashboard access
+
+### 🧑‍💻 For Patients
+- Register and log in
+- Browse available slots
+- Book, reschedule, or cancel appointments
+- View appointment history
+
+---
+
+## 📁 Project Structure
+
+### Backend (MVC - Express + Sequelize)
+```
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- MySQL
+- Yarn or npm
+
+---
+
+### 1️⃣ Backend Setup
+
+```bash
+npm install
+````
+
+Create a `.env` file:
+
+```env
+PORT=5000
+DB_NAME=dental_db
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_HOST=localhost
+JWT_SECRET=your_jwt_secret
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+---
+
+### 2️⃣ Frontend Setup
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+The app should now be running at
+🔗 `http://localhost:3000`
+
+---
+
+## 🔐 Authentication & Roles
+
+* JWT-based auth (HTTP-only cookie or header)
+* Role-based access:
+
+  * `admin`: Full access
+  * `dentist`: Manage appointments and patients
+  * `patient`: Book/view appointments
+
+---
+
+
+## 📬 Contact
+
+📧 rgacorda.the2nd@gmail.com
+
+
+```
+
